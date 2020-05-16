@@ -71,9 +71,7 @@ if(session('access_token')) {
   echo '<pre>';
   echo '</pre>';
   if(in_array($user->id, $usr) == true){
-    echo "<h1>Riverside Rocks Plus - Dashboard</h1>";
-    echo "Congrats! You have been whitelisted and are now in the Riverside Rocks Plus program.";
-    echo "We are still getting everything set up, so stick around.";
+    require('/oof.php');
   }
   else{
     echo "<h1>That sucks!</h1>";
