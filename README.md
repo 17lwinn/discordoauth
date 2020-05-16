@@ -1,1 +1,1 @@
-# LAMP Proof of Concept
+`dashboard.riverside.rocks`
