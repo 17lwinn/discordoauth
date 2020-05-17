@@ -61,24 +61,8 @@ if(get('code')) {
 
 if(session('access_token')) {
   $user = apiRequest($apiURLBase);
-
-  echo '<h3>Logged In</h3>';
-  echo '<h4>Welcome, ' . $user->username . '#' . $user->discriminator . '</h4>';
-  echo '<pre>';
-  echo '</pre>';
-  if(in_array($user->id, $usr) == true){
-    echo "<h1>Riverside Rocks Plus - Dashboard</h1>";
-    echo "Congrats! You have been whitelisted and are now in the Riverside Rocks Plus program.";
-    echo "We are still getting everything set up, so stick around.";
-  }
-  else{
-    echo "<h1>That sucks!</h1>";
-    echo "<h3>It appears that you are not in the Riverside Rocks Plus program.</h3>";
-    echo "<h3>You can apply <a href='/contact'>here</a>. Be sure to tell us that you want to apply.</h3>";
-  }
-  echo '<p><a href="?action=logout">Log Out</a></p>';
-  
-
+  header('Location: /home');
+  die();
 } else {
   echo '<h3>Sign in.</h3>';
   echo '<p style="font-size:20px;"><a href="?action=login">Log In<i class="fab fa-discord"></i></a></p>';
